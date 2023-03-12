@@ -90,3 +90,25 @@
     transform: rotate(45deg);
   }
   
+  @media (hover: hover) {
+    .accordion:hover {
+      cursor: pointer;
+      color: black;
+      transition: all 500ms;
+    }
+  
+    .accordion:hover > .bayan-wrapper .icon {
+      visibility: visible;
+      transition: all 500ms ease;
+    }
+  
+    .bayan-wrapper:hover {
+      cursor: pointer;
+    }
+  
+    .bayan-wrapper:hover > .meme-header .meme-img {
+      opacity: 1;
+      height: fit-content;
+      transition: all 1s ease;
+    }
+  }
