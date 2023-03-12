@@ -114,6 +114,10 @@ input:checked ~ .meme-header .icon {
 }
 
 @media (min-width: 1500px) {
+  h1 {
+    font-size: 3em;
+  }
+  
     .bayan-wrapper {
       width: 50vw;
     }
