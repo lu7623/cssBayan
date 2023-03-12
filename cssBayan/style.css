@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: "Railway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightyellow;
+}
+
+.accordion {
+  color: blueviolet;
+  transition: all 500ms;
+}
+
+.bayan-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  height: fit-content;
+}
+
+.bayan-wrapper:first-child {
+  border-top: 1px solid grey;
+}
+
+.bayan-wrapper:last-child {
+  border: none;
+}
+
+.meme-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.meme-header:active {
+  color: blueviolet;
+  opacity: 0.8;
+}
+
+.meme-img {
+  opacity: 0;
+  height: 0;
+  transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon {
+  visibility: hidden;
+  font-size: 1.6em;
+  color: black;
+  transition: all 300ms ease;
+}
+
+img {
+  width: 30em;
+  margin-bottom: 3em;
+  transition: all 1s ease;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ .meme-header .meme-img {
+  opacity: 1;
+  height: fit-content;
+  transition: all 500ms ease;
+}
+
+input:checked ~ .meme-header {
+  color: black;
+}
+
+input:checked ~ .meme-header .icon {
+  transform: rotate(45deg);
+}
+
+@media (hover: hover) {
+  .accordion:hover {
+    cursor: pointer;
+    color: black;
+    transition: all 500ms;
+  }
+
+  .accordion:hover > .bayan-wrapper .icon {
+    visibility: visible;
+    transition: all 500ms ease;
+  }
+
+  .bayan-wrapper:hover {
+    cursor: pointer;
+  }
+
+  .bayan-wrapper:hover > .meme-header .meme-img {
+    opacity: 1;
+    height: fit-content;
+    transition: all 1s ease;
+  }
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    font-size: 3em;
+  }
+  
+    .bayan-wrapper {
+      width: 50vw;
+    }
+  }
+
+@media (max-width: 1499px) {
+  .bayan-wrapper {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 850px) {
+    .bayan-wrapper {
+        width: 70vw;
+      }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .meme-text,
+  .icon {
+    font-size: 1em;
+  }
+
+  img {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 570px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .meme-text,
+  .icon {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  .meme-text,
+  .icon {
+    font-size: 0.6em;
+  }
+}
